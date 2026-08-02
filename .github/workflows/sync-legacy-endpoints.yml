@@ -1,0 +1,45 @@
+name: Sync legacy update endpoints
+
+# Mirrors docs/latest-versions.json and docs/changelog.md from
+# ulyngs/digital-habits-blocker into redd-block/ so pre-rename clients
+# (<= v3.8.7) that poll https://ulyngs.github.io/redd-block/... keep
+# discovering updates. Runs on a schedule because the main repo's
+# GITHUB_TOKEN cannot push cross-repo; a release therefore reaches
+# legacy clients within ~6 hours (or immediately via manual dispatch).
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch current files from digital-habits-blocker
+        run: |
+          set -euo pipefail
+          curl -fsSL -o redd-block/latest-versions.json \
+            "https://raw.githubusercontent.com/ulyngs/digital-habits-blocker/main/docs/latest-versions.json"
+          curl -fsSL -o redd-block/changelog.md \
+            "https://raw.githubusercontent.com/ulyngs/digital-habits-blocker/main/docs/changelog.md"
+          # Sanity check: never publish an empty/invalid manifest.
+          python3 -c "import json; m = json.load(open('redd-block/latest-versions.json')); assert m.get('macos'), 'manifest missing macos version'"
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "Already in sync."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add redd-block/
+          git commit -m "Sync legacy update endpoints from digital-habits-blocker"
+          git push

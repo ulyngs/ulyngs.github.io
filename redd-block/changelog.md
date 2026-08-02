@@ -1,0 +1,1083 @@
+# Changelog
+
+User-facing changes for each release. Every app upgrade adds a new entry here.
+
+Release sections can use a leading `> …` blockquote for the headline summary.
+List cross-platform changes first under `###` headings (e.g. FOCUS SPACES &
+SCHEDULES), then platform-specific notes under nested headings:
+
+`### BY PLATFORM` → `#### DESKTOP` → `##### macOS` / `##### Windows`, with
+`#### iOS` alongside `#### DESKTOP`. Bullets use `- **Short title.** Longer
+description.` Legacy flat lists still work.
+
+## v3.8.7
+
+### BRANDING
+
+- **Meet Digital Habits: Blocker!** Renamed from **ReDD Blocker** as part of
+  the move from the Reduce Digital Distraction (ReDD) Project to
+  **Centre for Digital Habits** ([digitalhabits.org](https://digitalhabits.org)).
+
+### FOCUS SPACES & SCHEDULES
+
+- **One focus space expands by default.** When you only have a single focus
+  space, its sites/apps summary expands on first render so you can see what it
+  covers without an extra click.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Digital Habits: Focus.** In-app references to the companion browser
+  extension now use its new Digital Habits: Focus name.
+- **Browser setup rows stay visible.** Extension-based browser setup rows no
+  longer disappear incorrectly in Settings.
+
+#### iOS
+
+- **Version:** 3.8.7 (macOS, Windows, and iOS).
+
+## v3.8.6
+
+### FOCUS SPACES & SCHEDULES
+
+- **Clearer Block vs Allow mode UI.** Mode selection and create-space actions
+  are redesigned, with clearer allowlist hints and matching website/app help
+  text in both Block and Allow modes.
+- **Custom stop messages work more reliably.** Curly/smart punctuation and
+  invisible paste characters no longer fail typing challenges as typos; empty
+  custom messages can't be saved; and the start confirmation shows your actual
+  custom message instead of an ambiguous character count.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Settings Setup and Onboarding reopen correctly.** Re-entering Setup or
+  Onboarding from Settings works again without replaying the full first-start
+  flow.
+
+##### macOS
+
+- **Window controls stay visible.** The close, minimize, and zoom buttons no
+  longer disappear after a warning-panel race at startup.
+
+#### iOS
+
+- **UI stays stable after keyboard dismiss.** Closing a modal or dismissing
+  the keyboard no longer leaves the phone UI stuck scrolled or zoomed oddly.
+
+- **Version:** 3.8.6 (macOS, Windows, and iOS).
+
+## v3.8.5
+
+### FOCUS SPACES & SCHEDULES
+
+- **Strictness dropdown fits smaller screens.** The Strictness dropdown in
+  the schedule editor no longer gets cut off on smaller screens.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+##### macOS
+
+- **Stale Automation warning clears after switching to extension blocking.**
+  When a browser's blocking method switches to the Digital Habits: Focus extension, the
+  leftover "Allow Digital Habits: Blocker to control your browser" warning now clears
+  instead of staying up indefinitely.
+
+- **Version:** 3.8.5 (macOS, Windows, and iOS).
+
+## v3.8.4
+
+### FOCUS SPACES & SCHEDULES
+
+- **Quick start confirms effort to leave.** Starting a Quick start now shows
+  the same effort-barrier confirmation as a normal focus space, so the typing
+  cost to exit early is clear up front.
+- **Single site or app on cards.** When a focus space blocks or allows only
+  one website or app, the card shows that name (full domain for sites) instead
+  of an expandable “1 site” / “1 app”.
+- **Schedule start shows Strictness.** The start-schedule confirmation lists
+  Flexible or Committed under Repeats. Flexible pause copy now says you can
+  pause without typing because Strictness is Flexible.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Version:** 3.8.4 (macOS, Windows, and iOS).
+
+## v3.8.3
+
+### FOCUS SPACES & SCHEDULES
+
+- **Schedule Strictness.** The between-blocks editing opt-in is now a
+  Strictness dropdown (Committed / Flexible) alongside Repeat and Start alert.
+  Committed is the default: once a schedule is started you can only make it
+  stricter until you stop it entirely. Flexible lets you edit or pause when
+  the schedule isn't actively blocking — and switching back to Flexible
+  requires a full stop, not just a pause.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Version:** 3.8.3 (macOS, Windows, and iOS).
+
+## v3.8.2
+
+### FOCUS SPACES & SCHEDULES
+
+- **Allow edits between blocks.** A new toggle that applies independently to 
+  every schedule that lets you change websites/apps, time segments, and other 
+  settings when there are no active time segments. It also removes all 
+  friction when pausing under the same conditions. Off-by-default - can only
+  be turned on before starting a schedule or if you pause/stop a schedule.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Clearer typing challenges.** Long override, pause, and stop challenges
+  auto-scroll so the next words stay visible, highlight the first mismatch
+  (including spaces), and block doubled or leading spaces that used to cause
+  invisible mismatches. Reference and input text wrapping stay aligned.
+
+- **Version:** 3.8.2 (macOS, Windows, and iOS).
+
+## v3.8.1
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Lighter background work.** Blocking uses less CPU and battery
+
+##### macOS
+
+- **Smarter app and website enforcement.** App blocking reacts to launches
+  and app switches instead of constant polling, and website Automation focuses on the frontmost browser while backing off when the display is asleep — same protection, lower power use.
+- **Blocked pages clear when a focus space ends.** When you stop or pause a
+  focus space (including Allow mode), tabs sitting on the blocked page return
+  to their original site under Automation, matching the Digital Habits: Focus extension.
+
+- **Version:** 3.8.1 (macOS, Windows, and iOS).
+
+## v3.8.0
+
+### FOCUS SPACES & SCHEDULES
+
+- **New focus spaces rise to the top.** Newly created focus spaces, Quick
+  starts, and duplicates now appear at the top of the list instead of at the
+  bottom.
+- **Active cards stay bright.** Running focus spaces no longer look dimmed
+  while they are active.
+- **Shorter stop control.** The stop button now reads "Stop" for a clearer,
+  tighter action label.
+- **Add/edit works after Quick Start.** Closing Quick Start no longer breaks
+  website and app selection in the add/edit focus space modal on narrow
+  screens.
+- **Aligned start panel layout.** The focus list bottom edge now lines up with
+  the start panel card for a steadier layout.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Full-screen sheets on narrow screens.** At narrow widths (718px and below),
+  enter, create, settings, and override flows use full-screen windows
+  instead of popup modals, with tighter compact layouts and improved
+  focus-card spacing.
+- **Cleaner title bar when idle.** The title bar no longer shows idle copy
+  when nothing is running
+- **Setup title no longer overflows.** The setup screen title wraps correctly
+  instead of overflowing.
+- **Enforcement info spans full width.** Allow-mode enforcement info messages
+  now span the full panel width on smaller screens.
+- **Lower minimum window height.** Narrow desktop windows can be resized
+  shorter to fit compact full-screen-sheet layouts.
+
+#### iOS
+
+- **Export works again.** Exporting focus spaces on iOS now saves real
+  content instead of an empty file, and shows a readable filename in the
+  success dialog.
+- **Website import menu fits the screen.** The add-website import menu is
+  correctly sized and positioned on iPhone, opening upward when needed
+  instead of clipping off-screen.
+
+- **Version:** 3.8.0 (macOS, Windows, and iOS).
+
+## v3.7.0
+
+### QUICK START FOCUS SPACES
+
+- **One-off quick start.** Start a 'Block' or 'Allow' mode focus space straight
+  from the home screen without creating a named focus space first. Choose 
+  duration, add your websites & apps, and use the slider to indicate how difficult 
+  overriding should be - look for the lightning bolt button to get started!
+- **Keep track of your quick start focus spaces.** Quick start focus spaces
+  appear in your focus-space list with clear temporary styling, so you can see
+  and control them without confusing them with saved spaces.
+- **From one-off to routine.** At any point before or during a quick start focus
+  space, you can save it as a regular focus space instead so it won't disappear
+  when the focus space ends.
+
+### FOCUS SPACES & SCHEDULES
+
+- **Pause one-off blocks and schedules independently.** If a focus space has
+  both a running one-off block and a schedule, pausing one no longer pauses the
+  other too.
+- **Pause flow is clearer.** Pause now uses the same safer confirmation flow as
+  stop, and paused-state copy in focus-space cards is clearer.
+- **Cards and summaries are clearer.** Focus-space cards and confirm modals
+  show clearer app/site counts, expanded details are easier to inspect, and the
+  card layout is steadier.
+- **Deleted spaces stay deleted.** If you remove your saved focus spaces and
+  close the app, reopening it no longer recreates an old space or invents a
+  new one for returning users.
+
+### LOCALIZATION
+
+- **Simplified Chinese.** Digital Habits: Blocker is now available in **Simplified
+  Chinese** and can auto-select it when your device or browser language is
+  Chinese.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Selection stays put after pause or stop.** On desktop, pausing or stopping
+  a focus space no longer drops your current selection.
+
+#### iOS
+
+- **Card-first home screen on iPhone.** On smaller iOS screens, the home screen
+  now acts as a clean list of focus-space cards, with start/stop and related
+  controls opening after you select a card instead of appearing immediately on
+  the home screen.
+- **Full-screen entry and Quick start flows.** On smaller iOS screens, the
+  entry screen, timer controls, and Quick start flow use full-screen
+  presentations that fit the redesigned mobile layout better.
+- **Clearer card affordances and landscape layout.** Focus-space cards better
+  indicate that they are interactive, and landscape layouts for the header, app
+  picker, swatches, and time segments are more stable.
+
+- **Version:** 3.7.0 (macOS, Windows, and iOS).
+
+## v3.6.0
+
+### ALLOW MODE
+
+- **Allow mode for focus spaces.** A focus space can now *allow* instead of
+  block: pick the apps and websites you can use, and everything else is blocked
+  while the space is active. Available on macOS, Windows, and iOS.
+- **Block / Allow.** Each space switches between **Block** and **Allow** in the
+  add/edit modal with clear indication of which mode you are on. Focus space 
+  cards show the mode and its items.
+- **Start overlay and warnings.** Starting an allow-mode space shows your
+  allowed apps and explains that other apps will be closed; only apps with real
+  open windows are targeted.
+- **Blocked pages.** The browser extension and macOS Automation blocked pages
+  use allow-mode framing when a site outside your allow list is redirected.
+- **iOS enforcement.** Allow-mode app and website blocking through Screen Time,
+  with allow-mode shield screens, start-gate dialogs, and category selections
+  expanded into real app counts.
+- **Diagnostics.** Diagnostics surface allow-mode enforcement
+
+### FOCUS SPACES & SCHEDULES
+
+- **One-shot schedules.** Non-repeating schedules are enforced reliably across
+  all backend paths.
+- **End time display.** The end time shown while a one-off block is running no
+  longer freezes.
+- **Active-space banner.** The warning banner reads "This focus space is
+  active. Some settings are locked." with a crisper icon.
+
+### UPDATE BANNER
+
+- **What's new?** The update banner has an expandable section with
+  grouped release notes for the newest version. Only changes relevant to
+  your device are shown.
+- **In-app reinstall.** The 'Reinstall' button downloads the latest installer 
+  from GitHub with a progress indicator and opens it when ready (if compatible
+  with device).
+- **Update banner layout.** Updated layout of all elements in the update banner
+  to align with main content.
+
+### ONBOARDING
+
+- **Layout improvements.** App icon and onboarding title text is now centered.
+
+### BRANDING
+
+- **App subtitle.** Installer and store copy now use **Digital Habits: Blocker: Space for
+  Focus**.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Browser setup.** Subtitles wrap on narrow widths instead of overflowing.
+- **Voice messages.** Recording and playback of start-overlay voice messages is
+  more reliable — fixes dropouts, too-quiet recordings, and muted first
+  playback.
+- **Extension hints.** Browser native-messaging files are repaired whenever
+  they drift out of date, not only when the app moves.
+
+##### macOS
+
+- **Extension mode.** Switching a browser to extension blocking in Settings skips
+  the setup overlay when permissions are already satisfied.
+- **Verified downloads.** The macOS `.pkg` is checked against the published
+  checksum before it opens.
+- **Installer guidance.** After download, a prompt reminds you to follow the
+  installer steps; the app reopens when the update finishes.
+
+##### Windows
+
+- **Taskbar icon.** The app icon on the taskbar shows smooth rounded corners on
+  the cream logo, without dark wedges in the corners.
+- **Microsoft Store extension blocking.** Browser extension setup works correctly
+  in the Store build — native-messaging files are written where Chrome and Edge
+  can find them.
+
+#### iOS
+
+- **EULA screen.** The licence agreement screen matches the layout and design
+  of the other onboarding screens.
+- **Number keypad.** Numeric-only input fields bring up the number keypad
+  instead of the full keyboard.
+- **Emoji picker.** On smaller screens the picker opens below the **+** button
+  and respects the safe area.
+
+- **Version:** 3.6.0 (macOS, Windows, and iOS).
+
+## v3.4.2
+
+> **Meet Digital Habits: Blocker!** **Fristed: Block Apps & Sites** has a new name — same
+> powerful blocking you love, now called **Digital Habits: Blocker**. Your Focus Spaces,
+> schedules, and blocklists carry over — nothing else changes.
+
+### FOCUS SPACES & SCHEDULES
+
+- **Focus Spaces.** **Focus Rooms** are now **Focus Spaces** — **My Focus
+  Spaces**, **Select a space**, **Start focus space?**, and matching stop/pause
+  copy.
+- **Stop and pause flows.** Stop and pause confirmations use clearer focus-space
+  labels, subtitles, and summary layout.
+- **Pinned header.** The Focus Spaces list header stays pinned while you scroll;
+  **Settings** sits in the header row.
+- **Steady cards.** Selecting a space no longer shifts neighbouring cards.
+- **Multi-segment schedules.** Schedules keep each segment expandable when you
+  have many; delete buttons show a clear hover state on desktop; **Start
+  schedule** uses the play icon.
+
+### BRANDING
+
+- **Digital Habits: Blocker icons.** Updated app, menu-bar tray, iOS shield, and
+  blocked-site page icons to Digital Habits: Blocker branding (replacing leftover Fristed
+  artwork).
+
+### LOCALIZATION
+
+- **Danish copy.** Onboarding and Settings strings updated for the Digital Habits: Blocker
+  name and blocking hints.
+
+### BY PLATFORM
+
+#### DESKTOP
+
+- **Performance.** The app skips unnecessary UI updates while hidden, patches
+  the title-bar countdown in place, and polls less aggressively when no blocked
+  apps are running.
+- **Window controls.** The maximize button uses window events instead of constant
+  polling.
+- **Startup.** Fixed a blank screen when the blocking warning opened before the
+  app UI was ready.
+
+##### macOS
+
+- **Cleaner upgrades.** The installer removes a leftover **Fristed.app** and
+  stale launch-at-login entries that could point at old app paths after you
+  upgrade.
+- **Automation onboarding.** Updated System Settings screenshot and sharper
+  setup-banner detection when browser Automation permissions change.
+
+##### Windows
+
+- **Data stays put.** Blocklist data in legacy **Fristed** or **ReDD Block**
+  storage folders is copied into the canonical **Digital Habits Blocker** path
+  automatically.
+
+##### iOS
+
+- **Home-screen icons.** App Store icons updated to the Digital Habits: Blocker logo.
+
+- **Version:** 3.4.2 (macOS, Windows, and iOS).
+
+## v3.4.1
+
+- **Focus Rooms.** Blocklists are now named **Focus Rooms** throughout the app 
+  — **My Focus Rooms**, **Select a room**, and **Enter the room?** copy, plus 
+  a room chip on the scheduler and in start confirmations.
+- **Entering a room.** The start-block and schedule-start confirmations use a
+  clearer header with room chip, subtitle, and summary card; you can dismiss
+  them by clicking outside on desktop.
+- **Room list.** A selected room shows an **Entering** chip; the default
+  **Distractions** starter room uses 📱.
+- **Add/edit room modal.** **Exit Difficulty** is a dedicated panel with live
+  preview and typing-time estimate; Save/Cancel sit in a sticky footer; the
+  websites **Lists** browse button has clearer icon spacing.
+- **Schedule segments.** Multiple schedule segments collapse so only one editor
+  is expanded at a time; active segments stay readable when collapsed.
+- **Scheduler polish.** The detail card shows the room chip and refined enter/stop
+  button styling; desktop **Now** / **Schedule** tabs keep text labels when
+  there is room.
+- **Settings.** Version appears in the settings header; Save sits in a sticky
+  footer; the **Settings** title matches other modal titles; grace-period
+  seconds are centered in the input.
+- **Desktop: modal scrollbars and layout.** Vertical overflow scrollbars sit on
+  the modal edge; at narrow widths the scheduler and room list stack vertically
+  even when a room is selected.
+- **iOS: full-screen modal fixes.** Full-screen sheets no longer rubber-band
+  horizontally when content scrolls vertically; back button, title, and version
+  line align correctly in the settings header.
+- **Version:** 3.4.1 (macOS, Windows, and iOS).
+
+## v3.3.3
+
+- **iPhone: full-screen modals.** Add/edit blocklist, settings, override, pause,
+  start-block confirm, start-schedule confirm, and override-all now open as
+  full-screen sheets on iPhone with a sticky header, back button, and scrollable
+  body. iPad and desktop keep popup-style modals.
+- **iPhone: week calendar hidden.** The week schedule view is hidden on iPhone
+  in all orientations so the main screen stays focused on blocklists and the
+  scheduler; iPad keeps the calendar.
+- **iPad: portrait stacked layout.** On iPad in portrait, blocklists, scheduler,
+  and week calendar stack vertically with roomier spacing and scaled controls,
+  similar to the iPhone layout at a tablet size.
+- **iPad: UI zoom scaling.** iPad uses transform-based shell scaling so zoom
+  changes typography and icons reliably in WKWebView (alongside the shared
+  zoom control in Settings).
+- **iOS: settings zoom.** Zoom level moves into Settings (default **100%**);
+  header and footer zoom controls are removed on mobile.
+- **iOS: redesigned confirmation modals.** Start block, start schedule, override,
+  and pause dialogs use a clearer header with emoji badge, subtitle, and summary
+  layout; schedule-start weekday pills stack under times on narrow screens so
+  days and times no longer collide.
+- **iOS: scheduler tab layout.** Now/Schedule tabs switch to icon-only when the
+  header row runs out of space, with hysteresis so the layout does not flicker.
+- **iOS: time and schedule polish.** Duration/end arrows and schedule segment
+  separators use scalable SVG icons; segment rows lay out more cleanly at higher
+  zoom; external links open in the system browser.
+- **iOS: Screen Time onboarding.** The permission footnote uses improved
+  onboarding typography; schedule start overlays can record voice messages
+  (microphone permission).
+- **Desktop: default zoom 100%.** The default UI zoom is **100%** (was 120%) on
+  macOS and Windows.
+- **Desktop: zoom in Settings.** Zoom controls move from the title bar and
+  footer into Settings → General (**Zoom level**).
+- **Desktop: settings and layout polish.** The settings gear stays visible in the
+  top-right without depending on blocklist selection; compact scheduler header
+  collapses when no blocklist is selected; **Appearance** is labelled **Theme**.
+- **Desktop: confirmation dialogs.** Start block, start schedule, override, and
+  pause modals share the updated header and summary styling; selection-prompt
+  placement is consistent across layout widths; confirmation copy is clearer
+  in English and Danish.
+- **Windows: uninstall guidance in Settings.** The **Open settings** shortcut
+  under Manage aligns with other action buttons in the settings panel.
+- **Version:** 3.3.3 (macOS, Windows, and iOS).
+
+## v3.3.2
+
+- **Meet Fristed: Block Apps & Sites!** ReDD Block has a new name — same
+  powerful blocking you love, now called **Fristed: Block Apps & Sites**.
+  Block distracting websites and apps, keep your schedules, and stay focused —
+  nothing else changes.
+- **Fristed rebrand onboarding for existing users.** Existing ReDD Block users
+  see a one-time Fristed rebrand screen before the regular welcome flow. 
+  Rebrand, welcome, Safari access, and migration screens switch more cleanly 
+  between each other, with larger onboarding icons, the Fristed meaning pill 
+  in copy, and refined spacing and text.
+- **Desktop: blocking mechanism settings show only installed browsers.** On macOS,
+  the per-browser blocking method rows in Settings now appear only for browsers
+  that are actually installed on your Mac. The Safari Full Disk Access row is
+  hidden when Safari is not installed.
+- **Desktop: clearer browser setup banner wording.** Setup banner headlines now
+  use **Digital Habits: Focus** wording when the outstanding issue is with a browser
+  extension, and keep Fristed wording for macOS Automation-related setup.
+- **Desktop: updated Full Disk Access screenshot.** The macOS Safari setup
+  guide now uses an up-to-date System Settings screenshot for granting Full
+  Disk Access.
+- **iOS: onboarding and UI polish.** The Fristed branding updates continue
+  across iOS, and the overlapping-days issue in the schedule start view is fixed.
+- **Dark mode: snooze icon visibility.** The snooze control icon is easier to
+  see in dark mode.
+- **Version:** 3.3.2 (macOS, Windows, and iOS).
+
+## v3.2.1
+
+- **macOS: browser Automation status in set-up screen.** The set-up browsers screen
+  now updates when Automation permissions are removed for a given browser. When status cannot
+  be detected (when browser is closed), it is now made clear.
+- **Desktop: manual browser close during enforcement.** If you close a browser
+  yourself during the grace countdown, the enforcement banner is cancelled
+  instead of continuing to count down.
+- **Update banner: What's new?** When release notes exist in the changelog for
+  the available version, the update banner shows an expandable **What's new?**
+  section with formatted bullet points.
+- **Desktop: design improvements and style tweaks.** Set-up buttons now give clear
+  feedback. Layout of content has been improved on desktop for thinner screens.
+- **Desktop: browser enforcement banners.** Improve transitions between enforcement
+  banners. Post-close state resets at the start of each new enforcement cycle.
+  Automation permission issues for multiple browsers collapse to one action row.
+  Post-close **Open browser** actions only target browsers that were
+  force-closed, not every browser with an issue. Enforcement banners are now more
+  reactive to real status of browsers.
+- **Version:** 3.2.1 (macOS and Windows).
+
+## v3.1.10
+
+- **Desktop: fix app-only schedule blocking.** Blocklists that only block apps
+  (no websites) — e.g. Downtime — now reach the in-process app watcher on
+  macOS and Windows. Active schedule app sets sync from disk on load/save and
+  in a background loop; the legacy helper-daemon gate no longer skips pushing
+  apps to the watcher.
+- **macOS: match blocked apps by bundle path.** Processes inside
+  `/Applications/<AppName>.app/` are recognised even when the system reports a
+  different executable name (e.g. Android Studio → `studio`).
+- **Diagnostics: faster open and accurate browser status.** The modal no
+  longer blocks the UI on macOS; Firefox extension install/enable/private-tab
+  status is scanned again. Opening diagnostics shows loading on the Settings
+  button and opens the full report only when ready.
+- **Diagnostics: automation table layout.** Allowed/Unknown statuses stay on
+  one line and align under the Automation column header.
+- **Version:** 3.1.10 (macOS and Windows).
+
+## v3.1.8
+
+- **macOS: fix "What's new" on fresh installs.** The one-time Automation
+  upgrade intro no longer appears for brand-new users. Onboarding is now
+  marked complete only after browser setup is dismissed, not when the
+  default blocklist is created on first launch.
+- **Version:** 3.1.8 (macOS and Windows direct distribution; iOS unchanged).
+
+## v3.1.7
+
+- **Windows (Microsoft Store): native-messaging registry fix.** MSIX AppxManifest
+  now declares `unvirtualizedResources` and excludes the four browser
+  `NativeMessagingHosts` HKCU paths from registry virtualization, so Chrome,
+  Edge, Brave, and Firefox can discover the native host and website blocking
+  works in Store builds. See `docs/microsoft-store-msix.md`.
+- **Version:** 3.1.7 (Windows Store; macOS and iOS unchanged).
+
+## v3.1.6
+
+- **Desktop:** bug fixes and styling improvements
+- **Version:** 3.1.6 (macOS and Windows; iOS unchanged).
+
+## v3.1.5
+
+- **Windows (Microsoft Store): website blocking fix.** Store installs now stage
+  the full native-host bundle (exe + DLLs) outside `WindowsApps` so browsers can
+  spawn it and receive block lists. Watchdog wrappers also install to
+  `%LOCALAPPDATA%` on MSIX builds.
+- **Version:** 3.1.5.
+
+## v3.1.3
+
+- **Windows: uninstall from Settings.** Settings → Manage includes guidance
+  and an **Open settings** shortcut to Installed apps, so you can remove ReDD
+  Block without hunting through the OS menus.
+- **Keyboard: Escape closes more overlays.** The title-bar block actions menu
+  (⋯ on active blocks) and other popovers now dismiss reliably with Esc, with
+  the topmost overlay closed first.
+- **iOS: Settings redesign and backup.** Settings uses the same sectioned-card
+  layout as desktop, with JSON export/import for blocklists and schedules;
+- **iOS: one-word override challenges.** Random-words and gibberish use
+  one-word-at-a-time typing in single-block override, pause, and Stop all
+  (full challenge text still visible, with “Word x of n”, a highlighted
+  current-word card, and a single-line field with Enter/Go).
+- **iOS: gibberish pseudo-words.** Gibberish challenges use spaced
+  six-character chunks (spaces are shown but not counted toward typing
+  workload); the blocklist editor preview shows that format instead of one long
+  string.
+- **iOS: override difficulty in words.** Random-words and gibberish difficulty
+  are set in **words** (max 500), not characters. Random words are always five
+  letters; time estimates and Stop-all “hardest challenge” selection compare
+  letter workload (words × 5 or × 6) against custom text length. Desktop
+  behavior is unchanged.
+- **Version:** 3.1.3 (desktop and iOS aligned).
+
+## v3.1.2
+
+- **Website blocking: Automation ↔ extension switching.** Switching between
+  Automation and extension mode in Settings now works consistently across
+  Safari, Chrome, Brave, Edge, and Firefox, with fixes for edge cases when
+  changing method on an already-configured browser.
+- **UI polish.** Settings, blocking status, and related screens received
+  layout and styling tweaks for clearer hierarchy and spacing.
+- **Version:** 3.1.2.
+
+## v3.1.1
+
+- **macOS: fix .pkg first-install dialog.** The preinstall script no longer
+  tries to quit ReDD Block before the app exists, which could show a spurious
+  “Where is ReDD Block?” prompt on fresh installs.
+- **macOS: optional data wipe on uninstall.** The uninstall dialog includes an
+  unchecked-by-default option to remove saved blocklists and settings.
+- **macOS: migration setup copy.** Safari and Chromium install rows now describe
+  manual store installs instead of claiming auto-install, matching the
+  Automation-first setup flow.
+- **Version:** 3.1.1.
+
+## v3.1.0
+
+- **macOS: optional extension mode for instant blocking.** Power users can
+  switch Chrome, Brave, Edge, or Safari from Automation (default) to the ReDD
+  Focus extension in Settings → Website blocking. Extension mode redirects
+  blocked URLs at navigation time instead of on the ~1 second Automation tick.
+  Chromium uses native messaging; Safari uses a shared App Group mirror of
+  your blocklists when extension mode is on.
+- **macOS: diagnostics improvements.** Automation permission status per
+  browser, manual Refresh (no background polling), and clearer layout for
+  blocked domains and apps.
+- **Version:** 3.1.0.
+
+## v3.0.0
+
+- **macOS: website blocking via Automation instead of browser extensions.**
+  Safari, Chrome, Brave, and Edge are now blocked through macOS Automation
+  (Apple Events) — no Digital Habits: Focus extension to install or keep enabled for
+  those browsers. Grant ReDD Block Automation access once per browser in
+  System Settings; the app redirects blocked URLs to a built-in block page.
+- **macOS: no Full Disk Access, App Group, or bundled Safari extension.**
+  The v2.x Safari Web Extension pipeline and cross-app data container are
+  removed. Firefox on macOS still uses the Digital Habits: Focus extension, installed
+  manually from the in-app setup flow (same as before for Firefox-only users).
+- **macOS: Automation onboarding and enforcer.** New setup rows with
+  step-by-step guidance (including a screenshot of System Settings →
+  Automation), a one-time upgrade intro for returning users, and enforcer
+  checks that respect Automation permission — including when a browser is
+  closed. Permission probes that need to launch a browser run only on
+  explicit user actions (e.g. “Grant access”), not on background polls, so
+  force-closed browsers stay closed.
+- **Settings and uninstall polish.** Settings dialog uses sectioned cards;
+  macOS uninstall copy calls out Firefox extension cleanup where relevant.
+- **Windows unchanged.** Chrome, Brave, Edge, and Firefox still block through
+  the Digital Habits: Focus extension and native messaging host.
+- **Version:** 3.0.0.
+
+## v2.3.0
+
+- **Settings: language and appearance controls.** Language picker shows flags
+  and full language names in a custom menu; theme and language use matching
+  bordered controls with a double-chevron style. The control column sizes to
+  content; feedback links are left-aligned with GitHub issues listed first.
+- **Settings copy and migration setup.** Danish strings updated across
+  override-all, uninstall, grace-period, and extension-setup flows; the
+  “Setting up Digital Habits: Focus” how-to list is shortened; miscellaneous wording tweaks
+  on the setup extension page.
+- **App-blocking warning (desktop).** The full-screen “Let’s go!” overlay and
+  the in-app close-down countdown are localized (English / Danish), including
+  app list phrasing.
+- **Diagnostics:** styling improvements on the diagnostics screen.
+- **Version:** 2.3.0.
+
+## v2.0.1
+
+- **macOS: in-app uninstall no longer surfaces an unexplained
+  "control Finder" prompt in the common case.** The Settings →
+  Uninstall ReDD Block flow now first calls
+  `NSFileManager.trashItemAtURL:` directly from the running app —
+  Apple's modern Trash API, which goes through the same privileged
+  path Finder uses internally but does **not** require Automation
+  TCC. On a typical admin account this is the only step that runs,
+  so the user sees no permission prompt at all. The detached `mv →
+  AppleScript Finder → rm -rf` script is kept as a fallback for
+  the rare case where the modern API fails (non-admin accounts,
+  unusual ownership). The uninstall confirmation dialog also now
+  warns the user up-front: *if macOS does ask permission to control
+  Finder, click Allow — that's how the app moves itself to the
+  Trash when it can't do it directly.*
+- **macOS: the app now appears in the Dock and the global menu bar
+  while the window is open.** Previously ReDD Block ran as a pure
+  menu-bar accessory on macOS — the app icon never appeared in the
+  Dock and no app name showed up next to the Apple logo, even when
+  the window was front-most. This made it easy to forget the app
+  was running and hard to tell whether you were "in" it. The app
+  now behaves like Cold Turkey Blocker:
+  - window open → Dock icon + app name in the menu bar,
+  - window closed (red X, Cmd-W, Cmd-Q) → hides to the tray, Dock
+    icon and menu bar disappear,
+  - tray-icon click / Dock-icon click / "Reopen Main Window" menu
+    item all bring the foreground UI back.
+
+  The enforcer, watcher and native messaging host keep running
+  through every transition — only the visible affordances change.
+- **The "Set up Digital Habits: Focus" reminder banner is now persistent for
+  everyone, not just v1.x upgraders.** Whenever any browser the
+  user has installed is missing the extension (or has it disabled,
+  or not allowed in private browsing), the slim banner shows up at
+  the top of the window — independent of whether the user came
+  from v1.x. Dismissing it (× button) hides it for the current
+  session only; it reappears next launch / on focus refresh while
+  the underlying problem persists, so a fresh user who clicks ×
+  on it isn't silently left without a reminder.
+- **Settings → Advanced Options → "Set up Digital Habits: Focus extension".**
+  New entry that re-opens the per-browser install checklist on
+  demand, so users who dismissed the banner (or the welcome
+  screen) can find their way back to the setup flow without
+  waiting for the next launch.
+- **Fix: the compliance enforcer no longer force-closes browsers
+  when no block is running.** Previously, if a browser had the
+  Digital Habits: Focus extension installed but misconfigured (e.g. not allowed
+  in incognito), the enforcer would start its grace countdown and
+  eventually quit the browser even when no website-blocking was
+  active — pestering users about an extension that wasn't doing any
+  work yet. The enforcer now no-ops while no website-blocking is
+  active and only kicks in once a block is actually running.
+- **Fix: macOS data-access prompts no longer pile up on every
+  enforcer tick.** On macOS Sequoia 15+, reading a browser's
+  Application Support directory triggers a "ReDD Block would like
+  to access data from other apps" prompt — once per browser. The
+  enforcer used to scan all five vendors (Chrome / Brave / Edge /
+  Firefox / Safari) on every 5 s tick regardless of which were
+  running, so a user with four browsers installed got four serial
+  prompts even though we only ever act on running browsers. Now the
+  enforcer only scans browsers that are currently running, and bails
+  before touching disk if none are.
+- **Fix: schedule-based app blocking now works.** Apps attached to a
+  blocklist that's enforced via a schedule (e.g. a Downtime block
+  covering eM Client, Word, Cursor, etc.) are now correctly closed
+  when the schedule's segment is active. Previously only apps from
+  one-off (manual) blocks reached the in-process app watcher; the
+  schedule path was a no-op left over from the v1.x helper-merges-
+  schedules-internally design.
+- **Fix: `tauri dev` no longer hijacks launch-at-login.** Previously
+  a `tauri dev` run would self-heal the launch-at-login entry so it
+  pointed at `target/debug/redd-block`; on next reboot, launchd would
+  spawn the dev binary with no Vite server running, producing a blank
+  window and `localhost:5173` connection errors. Auto-enable is now
+  release-builds-only — dev runs leave the existing launch-at-login
+  entry untouched.
+- **Fix: launch-at-login reclaims a stale slot.** Release builds now
+  rewrite the LaunchAgent / Run-key on every startup instead of only
+  when no entry is registered. So if the slot is pointing at the
+  wrong path (for example: an earlier install that lived in a
+  different folder, an uninstall + reinstall cycle, or an old dev
+  binary from before the previous fix), the next launch of the
+  installed app reclaims it and points it at the current binary.
+- **Fix: macOS .pkg installer no longer relocates to a stale copy.**
+  Previously the .pkg was built with macOS Installer's "Bundle
+  Relocation" feature enabled, so if any other copy of `ReDD
+  Block.app` existed elsewhere on disk (e.g. a previously-downloaded
+  build still in `~/Downloads/`, or — for developers — a build
+  artifact in `for-distribution/`), the installer would silently
+  redirect the install to overwrite that stale copy, leaving
+  `/Applications/ReDD Block.app` missing and the launch-at-login slot
+  pointing at a binary that doesn't exist. The .pkg is now built
+  with `BundleIsRelocatable=false`, so the installer always lands in
+  `/Applications` regardless of what's already on disk.
+
+## v2.0
+
+- **New blocking architecture on desktop.** No more privileged helper
+  daemon, no more hosts-file edits, no admin/UAC prompt on install.
+  - Website blocking on both macOS and Windows now goes through the
+    Digital Habits: Focus browser extension. Chrome / Brave / Edge / Firefox
+    speak to the app via a built-in native messaging host that's
+    just the app binary in a `--native-host` CLI mode. Safari
+    (macOS) now bridges through an App Group shared container and a
+    handler inside the signed `.app`.
+  - App blocking runs in-process on both OSes via a sysinfo
+    poll-and-kill loop. First use of app blocking on macOS prompts
+    once for Accessibility permission; AppleScript / Automation TCC
+    is no longer required.
+  - The compliance enforcer scans running browsers every 5 s and
+    force-quits any whose extension has been disabled or
+    misconfigured. The grace period before force-quit is
+    user-configurable (5 – 300 s, default 60 s).
+- **Minimum macOS is now 11 (Big Sur),** for Safari Web Extension
+  support. Still supports the same Windows versions.
+- **Reliable Safari extension detection.** The "Allow in Private
+  Browsing" toggle, the enabled state, and the install state are now
+  detected through a 15 s heartbeat from the extension into the App
+  Group container. A misconfigured Safari extension is caught within
+  ~45–105 s on default settings (down to ~50 s if grace is dialled
+  to its 5 s minimum). The previous v1.1 path silently passed every
+  Safari install regardless of configuration.
+- **Safari blocked-page no longer 404s.** The Safari extension
+  manifest now declares `web_accessible_resources` for `blocked.html`,
+  so opening a blocked URL renders the block page instead of
+  Safari's "can't find the file" error.
+- **App hides to tray on close** and launches at login so schedules
+  keep firing across sessions. A tray "Quit" entry remains the only
+  way to fully exit; Cmd-Q / window close are intercepted.
+- **Automatic migration on first launch.** The app cleans its old
+  entries out of the hosts file, removes the privileged helper
+  daemon, and moves onto the new backend. macOS prompts once for the
+  admin password to remove the old helper; Windows prompts once via
+  UAC. Idempotent — residue that reappears (e.g. after a v1.x
+  reinstall) re-triggers cleanup.
+- **"Keep blocking after uninstall" removed.** Uninstalling the app
+  now stops blocking cleanly.
+- **Windows watchdog.** A scheduled task ("ReDD Block Watchdog")
+  relaunches the app within ~1 minute if it crashes or is killed,
+  so schedules don't silently lapse.
+- **macOS `.pkg` upgrade path.** A signed `.pkg` installer is
+  available alongside the `.dmg`. Its preinstall script stops the
+  running app (including any browser-spawned native-host helpers)
+  before the new bundle is laid down, so users can upgrade in place
+  without manually quitting first. Postinstall relaunches the app.
+
+## v1.0.1
+
+- fix bug where EULA was showing on every opening of the app
+- fix iOS UI issues
+
+## v1.0.0
+
+- **EULA onboarding** — Added a licence-agreement step during onboarding
+- Non-repeating schedules now behave consistently across desktop and iOS: previews, saved schedules, active-state checks, and helper sync all resolve the same one-off occurrences.
+- Calendar rendering for one-off schedules now uses the correct local day, including overnight cases, instead of drifting because of timezone handling.
+- iOS schedule handling is more reliable in the background: paused schedules resume correctly, and one-off activities that cross midnight are handled properly.
+- macOS helper install now prefers the helper binary for the current architecture.
+
+## v0.9.7
+
+- **Helper troubleshooting** — Desktop helper install, update, repair, diagnostics, and uninstall flows are clearer and more reliable.
+- Settings and Diagnostics now show more accurate helper states (for example active, idle, or installed but not reachable) and refresh live while open.
+- Emergency stop and helper cleanup are more robust even when the helper is stale or not running.
+- Shared desktop data-path handling is more stable across install, uninstall, and reinstall.
+- Settings opens faster thanks to cached helper-status checks.
+
+## v0.9.6
+
+- Blocklist names now wrap correctly on the schedule.
+
+## v0.9.5
+
+- Blocklist card text is larger for readability.
+- Schedule repeats now default to **forever**.
+- Added a suggestions link.
+- iPad styling tweaks.
+- Version checks are no longer cached, so update prompts stay current more reliably.
+
+## v0.9.4
+
+- Desktop block data is now stored in a shared system-wide location, so blocks can be seen and edited more reliably across users.
+- Backwards compatibility added for the storage changes, making updates smoother on existing installs.
+- iOS no longer repeatedly asks for Screen Time access.
+- iOS app blocking inside schedules is fixed.
+
+## v0.9.3
+
+- The override dialog now lists the same number of websites as the blocklist cards.
+- Added a note that changes can take a little time to apply.
+- Emergency handling is simpler and clearer.
+
+## v0.9.2
+
+- **Diagnostics** — Added a diagnostics section in Settings to make helper/support troubleshooting easier.
+- Manual website blocking now updates the hosts file atomically for safer desktop blocking changes.
+
+## v0.9.0
+
+- **iOS scheduled blocking** — Fixed a long list of reliability issues: future segments activate correctly, schedule transitions resync properly, and date-limited or non-repeating windows are enforced as expected.
+- iOS overriding and pausing now behave properly with overlapping schedules and active blocks, so clearing one restriction no longer accidentally clears others.
+- Timed blocks and paused blocks on iOS now update in real time even when the app is closed, so they can end or resume in the background.
+- iOS now supports app-only blocklists.
+- Screen Time permission is now part of onboarding on iOS.
+- Schedule previews now match the actual running blocks more closely, including always-on schedules.
+- iOS app-picker and scrolling behaviour improved when there are many apps or blocklists.
+
+## v0.8.6
+
+- Fixed duplicated blocklists being active by default.
+- Better preview for override text.
+- Polished max difficulty challenge behaviour and copy, including more accurate typing estimates for random words and gibberish.
+- Max difficulty controls are now hidden when using custom override text.
+
+## v0.8.5
+
+- **Duplicate blocklist** — Duplicate a blocklist from the card menu; naming follows macOS duplicate behaviour (e.g. “Copy of My List”); new list appears at end
+- **Max difficulty mode** — Optional harder override challenge (highest character count)
+- Blocklist card menu — Move delete and blocklist buttons into dropdown and update edit icon
+- Undo — Undo recent changes; works correctly with locked website/app tags during active blocks.
+- Backspace on an empty website or app field removes the last tag (if not locked).
+- Paste multiple websites — Paste several URLs at once into the website field; valid ones are saved on space, Enter, or Save; invalid ones stay in the field with an error message so you can fix them.
+
+## v0.8.4
+
+- When updating the helper on macOS, legacy bundle id is now cleaned up too.
+- Scheduled blocking: app block detection corrected so blocked apps are detected reliably.
+- “Always on” block info message now stays visible when relevant.
+
+## v0.8.1
+
+- Press **ESC** to deselect the current blocklist or close the add/edit blocklist popup.
+- "Repeat until" date picker is disabled while a schedule is active (avoids invalid picks).
+- Layout improvements on smaller windows (768px) and general UI polish (footer, buttons, duration/end labels, hover states).
+- Helper update for more reliable website blocking over time.
+
+## v0.8.0
+
+- **Windows** release brought in line with macOS (same version and behaviour).
+- Clearer messages when the blocking helper isn’t running; app now re-checks and prompts to install the helper when needed.
+- Schedule and app blocking made more reliable (no overlapping sources; schedule changes checked more often).
+- Zoom and layout fixes on desktop (max zoom 150%, consistent behaviour on Windows).
+- Uninstall flow now shows how to contact us in case of emergency.
+- **Danish** translation added.
+- Blocklist name and URL validation improved (inline messages instead of alerts); scroll and alignment tweaks.
+
+## v0.7.2
+
+- Cancel button no longer re-shows the schedule when it’s hidden.
+
+## v0.7.1
+
+- **Pause** works properly with schedules and one-off blocks; paused state is synced to the helper so blocks stay paused after restart or reinstall.
+- Helper cleanup on macOS fixed (correct service name; all managed blocking sections removed on uninstall).
+- More reliable connection to the helper (bounded timeouts on Mac and Windows).
+- Schedule UI fixes: edit only when there are pending changes; no duplicate schedules in calendar; correct blocklist name on buttons.
+- New dialog when pausing with no active schedule.
+
+## v0.7.0
+
+- Zoom support added (desktop).
+- Mac menu bar items added/updated.
+- Invalid blocklist URLs can no longer be saved.
+
+## v0.6.6
+
+- Override challenge has clear maximum difficulty (e.g. 7500 characters for custom text, 5000 for gibberish).
+
+## v0.6.5
+
+- Blocklist status badges now match actual blocking state and update automatically.
+- App blocking more reliable on **Mac** (periodic check while running) and **Windows** (schedules refresh blocked apps immediately).
+- “Keep blocking on uninstall” choice is now saved correctly.
+- Support for multiple simultaneous blocks; override is tied to the correct blocklist.
+- Website blocking logic simplified so the helper is the single source of truth.
+
+## v0.6.4
+
+- You can’t accidentally block ReDD Block itself or the domains needed for app updates.
+
+## v0.6.3
+
+- Windows: more reliable helper installation (correct architecture bundling, firewall handling).
+- Helper updates and logging improvements.
+
+## v0.6.2
+
+- Helper installation on Windows improved (firewall, logging).
+- Helper version kept in sync with app.
+
+## v0.6.1
+
+- **Pause** — Pause an active block and resume later; dialog and button placement improved.
+- **Update available** banner on the main screen when a new version is released.
+- Option to block **always** (no end time).
+- iOS: blocking state synced when a one-off block expires; separate capabilities for iOS vs desktop.
+- Schedule check interval relaxed for better performance; immediate feedback when changing blocklist settings.
+- App version shown in Settings; no update prompt if helper is newer than app.
+
+## v0.6.0
+
+- **Pause** — Pause and resume blocks; preview of schedule changes; footer and dialog layout fixes.
+- **Update available** banner; domain validation; “block always” option.
+- **iOS**: Scheduled blocking stays in sync when one-off blocks end; Screen Time entitlements and capabilities fixed.
+- UI polish and always-on detection improved.
+
+## v0.5.6
+
+- “Keep blocking on uninstall” preference now read correctly by the helper (data path fix).
+- README and build script updates.
+
+## v0.5.5
+
+- **Windows**: App blocking works correctly after helper install.
+- App blocking fully handled by the helper (desktop); cancel on override-all returns you to settings.
+- Sync-helper script and UI icons updated.
+
+## v0.5.3
+
+- **Clean hosts file** button in Settings (desktop) to remove leftover block entries.
+- Windows: PowerShell windows hidden during app blocking; ARM64 signing fixes.
+- Installers copied to `for-distribution/` with consistent filenames.
+- Screen Time plugin built only for iOS.
+
+## v0.5.2
+
+- **iOS**: Scheduled blocking via **DeviceActivityMonitor**; multiple schedules supported; App Store signing and Xcode build fixed.
+- **iOS**: Authorization check before blocking; warning when domains exceed Screen Time’s 50-domain limit; app selection preserved.
+- **Windows**: Safer helper install (temp dir, auth, hosts restore, log rotation); IPC and install script fixes.
+- **Desktop**: Safer hosts file updates (atomic write, backup validation); macOS force-cleanup restores hosts correctly.
+- Schedule segments with start equal to end treated as “all day”.
+
+## v0.5.1
+
+- **Scheduled blocking** moved into the helper so blocks continue when the app is closed.
+- Helper (not the app) now performs app blocking on desktop.
+- Override time calculation fixed; safety check when writing to hosts file.
+- **iOS** dev command added (`npm run dev:ios`).
+
+## v0.5.0
+
+- **iOS support** — ReDD Block on iPhone and iPad using the **Screen Time** API (website and app blocking).
+- **iOS**: Responsive layout for small screens; scheduled blocking enabled; delete button and modals adjusted for iOS; input zoom prevented.
+- Default “Distractions” blocklist (e.g. Instagram, YouTube, Reddit) replaces onboarding.
+- **Desktop**: Overlapping schedules shown side-by-side; multiple apps selectable; “always on” block option; calendar and schedule fixes.
+- Helper version separated from app version for cleaner updates.
+
+## v0.4.5
+
+- Option to **hide blocklist contents** on the card (e.g. for sensitive lists).
+- Edit button always visible; old helper location cleaned up on upgrade.
+
+## v0.4.4
+
+- Helper installed in conventional location; reinstall if outdated when running dev.
+- **Windows**: Helper reinstall kills old process first; elevated permissions for task commands; no visible PowerShell windows when flushing cache.
+- Single-step helper installation; “Uninstall helper” wording unified; version comparison fixed.
+
+## v0.4.3
+
+- **Mac**: Helper syncs in development; app prompts to update helper if outdated; version shown in Settings.
+- Helper uninstall requires overriding active blocks first; clearer uninstall wording.
+- Mac build includes helper binary correctly; block stays selected after start; helper logs and permissions on first start.
+
+## v0.4.2
+
+- **Windows**: Helper installation and uninstall fixed (UAC, single process watcher, no console window).
+- Hosts file backup and DNS flush logging.
+
+## v0.4.1
+
+- **Windows** support — ReDD Block runs on Windows: title bar with controls, scheduled blocking, app blocking (watcher), MSIX/UAC handling.
+- **Scheduled blocking** (desktop): weekly calendar view, temporary and recurring segments, cross-midnight and “repeat until” fixes; schedule UI (disable edit when active, stop schedule button, exclusive temp additions).
+- **Desktop**: Add apps to a block after starting; settings and distinct hosts-file markers; one-off and schedule time/duration persist.
+- Electron dependency removed; Mac build script and version handling improved.
+
+## v0.3.0
+
+- Hosts file **backup** before making changes (restore if needed).
+- README updated for Tauri 2.
+
+## v0.2.6 — First Tauri release
+
+ReDD Block rebuilt with **Tauri 2** (replacing Electron). Same app, leaner and more reliable.
+
+- **Blocklists** — Create multiple lists with custom names, colors, and emojis; add websites and choose which apps to block per list.
+- **Website blocking** — System-level blocking via a small helper daemon (hosts file on Mac and Windows); works in all browsers and keeps blocking when the app is closed.
+- **App blocking** — Blocked apps are hidden or minimized when you try to use them (Mac: process watcher; Windows support added later).
+- **One-off blocks** — Start a block now with a duration; see time remaining next to the active badge.
+- **Scheduled blocks** — Set recurring blocks on specific days and times (e.g. weekday work hours).
+- **Override protection** — Typing challenges (random words, gibberish, or custom text) to discourage impulsive unblocking; autocorrect disabled in the challenge field.
+- **Theme** — Auto, light, or dark mode.
+- **Desktop UI** — Clearer font sizes, select styling, and modal spacing; transparent titlebar with overlay traffic lights on macOS.
