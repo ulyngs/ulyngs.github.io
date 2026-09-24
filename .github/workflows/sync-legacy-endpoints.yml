@@ -1,11 +1,15 @@
 name: Sync legacy update endpoints
 
 # Mirrors docs/latest-versions.json and docs/changelog.md from
-# ulyngs/digital-habits-blocker into redd-block/ so pre-rename clients
-# (<= v3.8.7) that poll https://ulyngs.github.io/redd-block/... keep
-# discovering updates. Runs on a schedule because the main repo's
-# GITHUB_TOKEN cannot push cross-repo; a release therefore reaches
-# legacy clients within ~6 hours (or immediately via manual dispatch).
+# digitalhabits/dh-blocker into the old GitHub Pages paths that
+# already-shipped clients still poll, because Pages URLs do not follow a
+# repo rename or transfer:
+#   redd-block/              <- clients <= v3.8.7 (repo was ulyngs/redd-block)
+#   digital-habits-blocker/  <- clients v3.8.8–v3.8.11 (repo was
+#                               ulyngs/digital-habits-blocker)
+# Runs on a schedule because the main repo's GITHUB_TOKEN cannot push
+# cross-repo; a release therefore reaches legacy clients within ~6 hours
+# (or immediately via manual dispatch).
 
 on:
   schedule:
@@ -21,25 +25,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch current files from digital-habits-blocker
+      - name: Fetch current files from dh-blocker
         run: |
           set -euo pipefail
-          curl -fsSL -o redd-block/latest-versions.json \
-            "https://raw.githubusercontent.com/ulyngs/digital-habits-blocker/main/docs/latest-versions.json"
-          curl -fsSL -o redd-block/changelog.md \
-            "https://raw.githubusercontent.com/ulyngs/digital-habits-blocker/main/docs/changelog.md"
+          SRC="https://raw.githubusercontent.com/digitalhabits/dh-blocker/main/docs"
+          curl -fsSL -o /tmp/latest-versions.json "$SRC/latest-versions.json"
+          curl -fsSL -o /tmp/changelog.md "$SRC/changelog.md"
           # Sanity check: never publish an empty/invalid manifest.
-          python3 -c "import json; m = json.load(open('redd-block/latest-versions.json')); assert m.get('macos'), 'manifest missing macos version'"
+          python3 -c "import json; m = json.load(open('/tmp/latest-versions.json')); assert m.get('macos'), 'manifest missing macos version'"
+          for dir in redd-block digital-habits-blocker; do
+            mkdir -p "$dir"
+            cp /tmp/latest-versions.json /tmp/changelog.md "$dir/"
+          done
 
       - name: Commit if changed
         run: |
           set -euo pipefail
-          if git diff --quiet; then
+          git add redd-block/ digital-habits-blocker/
+          if git diff --staged --quiet; then
             echo "Already in sync."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add redd-block/
-          git commit -m "Sync legacy update endpoints from digital-habits-blocker"
+          git commit -m "Sync legacy update endpoints from dh-blocker"
           git push
